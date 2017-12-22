@@ -1,0 +1,78 @@
+<html ng-app="table">                                                           <!--Тут название приложения-->
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
+        <link rel="stylesheet" href="css/main.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <script src="js/angular.min.js"></script>
+       
+       
+       
+        <script>                                                                         //Весь этот скрипт
+            var table = angular.module('table', []);                                     //
+            table.controller('tableCtrl', function ($scope, $http){                        //
+                $http.get('/api/Stations').then(successCallback, errorCallback);        //  
+                    function successCallback(data){                                     //
+                        $scope.Stations =data.data;//обращаемся к содержимому data      //
+                        console.log($scope.Stations)                                    //
+                    }                                                                   //
+                    function errorCallback(error){                                      //
+                        console.log("Error in getting files");                          //
+                    }                                                                   //
+            });                                                                         //
+        </script>
+
+
+  </head>
+ 
+  <body ng-controller="tableCtrl">                                                   <!--Это контроль-->
+    
+    
+    <div class="background"></div>
+      <div class="container-fluid">
+        <div class="col-md-10 col-md-offset-1">
+            <h1 class="text-center">Покупка билетов</h1>
+        <table class="table table-striped" id="grid">
+            <thead>
+                <tr>
+                    <th class="col1" data-type="string">Станция отправления</th>
+                    <th class="col1" data-type="string">Станция назначения</th>
+                    <th class="col1" data-type="string">Дата отправления</th>
+                    <th class="col1" data-type="string">Время отправления</th>
+                    <th class="col1" data-type="string">Дата прибытия</th>
+                    <th class="col1" data-type="string">Время прибытия</th>
+                    <th class="col1" data-type="string">Время в пути</th>
+                    <th class="col1" data-type="string">Тип вагонов</th>
+                    <th class="col1" data-type="string">Цена билета</th>
+                    <th class="col1" data-type="string">Количество билетов</th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+
+                <tr ng-repeat="Station in Stations | orderBy: 'dateStart' ">  <!--весь этот tr-->
+                    <td>{{Station.nameStart}}</td>                             <!---->
+                    <td>{{Station.nameTo}}</td>                                <!---->
+                    <td>{{Station.dateStart}}</td>                              <!---->
+                    <td>{{Station.timeStart}}</td>                              <!---->
+                    <td>{{Station.dateEnd}}</td>                                   <!---->
+                    <td>{{Station.timeEnd}}</td>                                    <!---->
+                    <td>{{Station.inRoad}}</td>                                 <!---->
+                    <td>{{Station.WagonType}}</td>                                  <!---->
+                    <td>{{Station.cost}}</td>                                       <!---->
+                    <td>{{Station.TicketsNumber}}</td>                          <!---->
+                </tr>
+
+                
+            </tbody>
+        </table>
+        <div class="col-md-12">
+            <button type="submit" class="btn btn-success col-md-2 col-md-offset-3" id="buy"><a href="main.html">Назад</a></button>
+            <button type="submit" class="btn btn-success col-md-2 col-md-offset-2" id="buy"><a href="registration.html">Далее</a></button>
+        </div>
+    </div>
+    </div>
+    <script type="text/javascript" src="../js/js.js" ></script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="../js/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="container-fluid">
+        <div class="col-md-10 col-md-offset-1">
+            <h1 class="text-center">Расписание выбранных поездов</h1>
+            <table class="table table-striped" id="grid">
+                <thead>
+                    <tr>
+                        <th class="col1" data-type="string">Станция отправления</th>
+                        <th class="col1" data-type="string">Станция назначения</th>
+                        <th class="col1" data-type="string">Дата отправления</th>
+                        <th class="col1" data-type="string">Время отправления</th>
+                        <th class="col1" data-type="string">Дата прибытия</th>
+                        <th class="col1" data-type="string">Время прибытия</th>
+                        <th class="col1" data-type="string">Время в пути</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1станция</td>
+                        <td>2станция</td>
+                        <td>Дата1</td>
+                        <td>Время1</td>
+                        <td>Дата2</td>
+                        <td>Время2</td>
+                        <td>Время-Путь</td>
+                    </tr>
+                    <tr>
+                        <td>1станция</td>
+                        <td>2станция</td>
+                        <td>Дата1</td>
+                        <td>Время1</td>
+                        <td>Дата2</td>
+                        <td>Время2</td>
+                        <td>Время-Путь</td>
+                    </tr>
+                    <tr>
+                        <td>1станция</td>
+                        <td>2станция</td>
+                        <td>Дата1</td>
+                        <td>Время1</td>
+                        <td>Дата2</td>
+                        <td>Время2</td>
+                        <td>Время-Путь</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <button type="submit" class="btn btn-success col-md-2 col-md-offset-5" id="buy">Назад</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/js.js"></script>
+</body>
+<script>
+    $("#buy").on("click", function() {
+        var url = "http://localhost:3000/html/main.html";
+        var obj = "erbterbt"
+        window.location.href = "main.html";
+        console.log(obj)
+        $.ajax({
+            url: "./main.html",
+            type: 'GET',
+            success: function(data) {
+                console.log(data);
+            }
+        });
+    })
+    angular.module('MyApp', []).controller('app', ['$scope', function($scope) {
+        $scope.name = "Irina"
+    }])
+</script>
+
+</html>
