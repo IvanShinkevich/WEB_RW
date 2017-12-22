@@ -1,0 +1,36 @@
+form{
+	padding: 3vw;
+	margin-top: 0vw;
+	background:rgb(255,255,255);
+	border-radius: 5px;
+}
+.registr{
+	margin-top: 0;
+	padding: 3vw;
+}
+table{
+	padding: 7vw;
+	margin-top: 8vw;
+}
+.background{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/1048.jpg);
+	background-size: 100% 100%;
+	filter: blur(1px) brightness(40%);
+}
+
+h1{
+	color: white;
+}
+
+table{
+	overflow:hidden;
+    border:1px solid #d3d3d3;
+    background:#fefefe;
+    width:70%;
+    margin:5% auto ;
+    border-radius:5px;
+}
+
