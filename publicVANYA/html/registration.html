@@ -13,7 +13,7 @@
     <div class="background"></div>
     <div class="container-fluid">
         <h1 class="col-md-12 text-center">Введите ваши данные</h1>
-        <form class="col-md-6 col-md-offset-3 registr" role="form">
+        <form class="col-md-6 col-md-offset-3 registr" name="PersonData" action="/handleE" method="post">
             <div class="form-group col-md-6">
                 <label for="surname">Фамилия</label>
                 <input type="text" class="form-control" id="Surname" placeholder="Введите вашу фамилию">
@@ -28,7 +28,7 @@
             </div>
             <div class="form-group col-md-6">
                 <label for="passport-time">Срок действия паспорта</label>
-                <input type="text" class="form-control" id="PassTime" placeholder="Введите срок действия паспорта ">
+                <input type="text" class="form-control" id="TimePass" placeholder="Введите срок действия паспорта ">
             </div>
             <div class="form-group col-md-6">
                 <label for="mail">E-mail</label>

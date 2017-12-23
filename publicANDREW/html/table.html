@@ -61,21 +61,4 @@
     </div>
     <script type="text/javascript" src="../js/js.js" ></script>
   </body>
-  <script>
-    $("#buy").on("click", function() {
-        var url = "http://localhost:3000/html/main.html";
-        var obj = "erbterbt"
-        window.location.href = "main.html";
-        console.log(obj)
-        $.ajax({
-            url: "./main.html",
-            type: 'GET',
-            success: function(data) {
-                console.log(data);
-            }
-        });
-    })
-    angular.module('MyApp', []).controller('app', ['$scope', function($scope) {
-        $scope.name = "Irina"
-    }])</script>
 </html>
