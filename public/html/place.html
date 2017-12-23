@@ -1,65 +1,70 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="../bootstrap/css/bootstrap.css"/>
-        <link rel="stylesheet" href="../css/main.css"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
-        <script src="../js/angular.min.js"></script>
-  </head>
-  <body><div class="background"></div>
-      <div class="container-fluid">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="../js/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="container-fluid">
 
         <div class="col-md-8 col-md-offset-2 table-wrap">
             <h1 class="text-center">Выбор места</h1>
-        <table class="table table-bordered" id="grid">
-            <tbody>
-                <tr class="text-center">
-                    <td>В</td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>9</td>
-                    <td>10</td>
-                    <td>13</td>
-                    <td>14</td>
-                </tr>
-                <tr class="text-center">
-                    <td>Н</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>11</td>
-                    <td>12</td>
-                    <td>15</td>
-                    <td>16</td>
-                </tr>
-                <tr>
-                    <td colspan="9" class="text-center">Проход</td>
-                </tr>
-                <tr class="text-center">
-                    <td>В</td>
-                    <td colspan="2">17</td>
-                    <td colspan="2">18</td>
-                    <td colspan="2">19</td>
-                    <td colspan="2">20</td>
-                </tr>
-                <tr class="text-center">
-                    <td>Н</td>
-                    <td colspan="2">21</td>
-                    <td colspan="2">22</td>
-                    <td colspan="2">23</td>
-                    <td colspan="2">24</td>
-                </tr>
-            </tbody>
-        </table>
-        <div>
-            <button type="submit" class="btn btn-success col-md-2 col-md-offset-3" id="buy"><a href="registration.html">Назад</a></button>
-            <button type="submit" class="btn btn-success col-md-2 col-md-offset-2" id="buy"><a href="kard.html">Далее</a></button>
+            <table class="table table-bordered" id="grid">
+                <tbody>
+                    <tr class="text-center">
+                        <td>В</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>13</td>
+                        <td>14</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td>Н</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>15</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td colspan="9" class="text-center">Проход</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td>В</td>
+                        <td colspan="2">17</td>
+                        <td colspan="2">18</td>
+                        <td colspan="2">19</td>
+                        <td colspan="2">20</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td>Н</td>
+                        <td colspan="2">21</td>
+                        <td colspan="2">22</td>
+                        <td colspan="2">23</td>
+                        <td colspan="2">24</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <button type="submit" class="btn btn-success col-md-2 col-md-offset-3" id="buy"><a href="registration.html">Назад</a></button>
+                <button type="submit" class="btn btn-success col-md-2 col-md-offset-2" id="card"><a href="kard.html">Далее</a></button>
+            </div>
         </div>
     </div>
-    </div>
-    <script type="text/javascript" src="../js/js.js" ></script>
-  </body>
+    <script type="text/javascript" src="../js/place.js"></script>
+</body>
+
 </html>

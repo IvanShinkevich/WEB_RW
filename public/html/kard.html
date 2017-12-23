@@ -1,43 +1,40 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="../bootstrap/css/bootstrap.css"/>
-        <link rel="stylesheet" href="../css/main.css"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
-        <script src="../js/angular.min.js"></script>
-  </head>
-  <body>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="../js/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+
+<body>
     <div class="background"></div>
     <div class="container-fluid">
         <div class="row">
-          <h1 class="col-md-12 text-center">Введите данные вашей карты</h1>
-    <form class="col-md-4 col-md-offset-4 registr" role="form" >
-        <div class="form-group">
-            <label for="from">Номер карты</label>
-            <input type="text" class="form-control" id="from" placeholder="Введите номер карты">
+            <h1 class="col-md-12 text-center">Введите данные вашей карты</h1>
+            <form class="col-md-4 col-md-offset-4 registr" role="form" action="/AddCard" method="post" name="card">
+                <div class="form-group">
+                    <label for="from">Номер карты</label>
+                    <input type="text" class="form-control" id="cardNumber" placeholder="Введите номер карты" required>
+                </div>
+                <div class="form-group ">
+                    <label for="where">Код карты</label>
+                    <input type="text" class="form-control" id="cardCode" placeholder="Введите код карты" required>
+                </div>
+                <div class="form-group ">
+                    <label for="where">Срок действия карты</label>
+                    <input type="text" class="form-control" id="cardTime" placeholder="Введите срок действия карты" required>
+                </div>
+                <div class="form-inline col-md-12">
+                    <button type="submit" class="btn btn-success col-md-4 col-md-offset-1" id="buy">Назад</button>
+                    <button type="submit" class="btn btn-success col-md-4 col-md-offset-2" id="table">Далее</button>
+                </div>
+            </form>
         </div>
-        <div class="form-group ">
-            <label for="where">Код карты</label>
-            <input  type="text" class="form-control" id="where" placeholder="Введите код карты ">
-        </div>
-         <div class="form-group ">
-            <label for="where">Срок дейтвия карты</label>
-            <input type="text" class="form-control" id="where" placeholder="Введите срок действия карты ">
-        </div>
-        <div class="form-inline col-md-12">
-            <button type="submit" class="btn btn-success col-md-4 col-md-offset-1" id="buy">Назад</button>
-            <button type="submit" class="btn btn-success col-md-4 col-md-offset-2" id="table">Далее</button>
-        </div>
-    </form>
-</div>
-</div>
-    <script type="text/javascript" src="../js/js.js" ></script>
-  </body>
-  <script>
-    angular.module('MyApp',[]).controller('app', ['$scope', function($scope) {
-  $scope.name ="Irina"
-}]
+    </div>
+    <script type="text/javascript" src="../js/card.js"></script>
+</body>
 
-    )
-  </script>
 </html>
