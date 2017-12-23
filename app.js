@@ -24,7 +24,7 @@ var app = express();
 // создаем парсер для данных в формате json
 var jsonParser = bodyParser.json();
 
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/publicANDREW"));
 
 app.get("/api/users", function(req, res) {
 
