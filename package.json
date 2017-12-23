@@ -4,7 +4,15 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+<<<<<<< HEAD
     "mongoose": "^4.13.7"
+=======
+    "expressjs": "^1.0.1",
+    "mongodb": "^3.0.0-rc0",
+    "mongoose": "^4.13.7",
+    "nodejs": "^0.0.0",
+    "nodemon": "^1.14.2"
+>>>>>>> e7f2f96fe51d84bdf8acd55a881a217bd10f4c0f
   },
   "scripts": {
     "start": "node app.js"
